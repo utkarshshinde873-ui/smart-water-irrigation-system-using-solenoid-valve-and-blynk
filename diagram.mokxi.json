@@ -1,0 +1,781 @@
+{
+  "version": 1,
+  "name": "Stacker",
+  "parts": [
+    {
+      "id": "xiaoc31",
+      "type": "xiaoc3",
+      "props": {
+        "wifiRssi": -52,
+        "wifiSsid": "Mokxi-Lab",
+        "wifiPassword": "breadboard"
+      },
+      "x": 380,
+      "y": -200,
+      "rot": 0
+    },
+    {
+      "id": "relay81",
+      "type": "relay8",
+      "props": {
+        "trigger": "low",
+        "coil": "5V",
+        "pull_ms": 10,
+        "release_ms": 5
+      },
+      "x": 720,
+      "y": 100,
+      "rot": 0,
+      "locked": true
+    },
+    {
+      "id": "solenoid1",
+      "type": "solenoid",
+      "props": {
+        "model": "12V water valve",
+        "voltage": 12,
+        "resistance": 40,
+        "inductance": 30,
+        "pull": 0.75,
+        "release": 0.15,
+        "pull_ms": 15,
+        "release_ms": 10
+      },
+      "x": 1120,
+      "y": -200,
+      "rot": 270
+    },
+    {
+      "id": "soilmoisture1",
+      "type": "soilmoisture",
+      "props": {
+        "dry": 2.55,
+        "wet": 1.27
+      },
+      "x": 1040,
+      "y": -560,
+      "rot": 270
+    },
+    {
+      "id": "soilmoisture2",
+      "type": "soilmoisture",
+      "props": {
+        "dry": 2.55,
+        "wet": 1.27
+      },
+      "x": 880,
+      "y": -560,
+      "rot": 270
+    },
+    {
+      "id": "soilmoisture3",
+      "type": "soilmoisture",
+      "props": {
+        "dry": 2.55,
+        "wet": 1.27
+      },
+      "x": 720,
+      "y": -560,
+      "rot": 270
+    },
+    {
+      "id": "soilmoisture4",
+      "type": "soilmoisture",
+      "props": {
+        "dry": 2.55,
+        "wet": 1.27
+      },
+      "x": 560,
+      "y": -560,
+      "rot": 270
+    },
+    {
+      "id": "solenoid2",
+      "type": "solenoid",
+      "props": {
+        "model": "12V water valve",
+        "voltage": 12,
+        "resistance": 40,
+        "inductance": 30,
+        "pull": 0.75,
+        "release": 0.15,
+        "pull_ms": 15,
+        "release_ms": 10
+      },
+      "x": 820,
+      "y": -200,
+      "rot": 270
+    },
+    {
+      "id": "solenoid3",
+      "type": "solenoid",
+      "props": {
+        "model": "12V water valve",
+        "voltage": 12,
+        "resistance": 40,
+        "inductance": 30,
+        "pull": 0.75,
+        "release": 0.15,
+        "pull_ms": 15,
+        "release_ms": 10
+      },
+      "x": 680,
+      "y": -200,
+      "rot": 270
+    },
+    {
+      "id": "solenoid4",
+      "type": "solenoid",
+      "props": {
+        "model": "12V water valve",
+        "voltage": 12,
+        "resistance": 40,
+        "inductance": 30,
+        "pull": 0.75,
+        "release": 0.15,
+        "pull_ms": 15,
+        "release_ms": 10
+      },
+      "x": 20,
+      "y": -480,
+      "rot": 0
+    },
+    {
+      "id": "solenoid5",
+      "type": "solenoid",
+      "props": {
+        "model": "12V water valve",
+        "voltage": 12,
+        "resistance": 40,
+        "inductance": 30,
+        "pull": 0.75,
+        "release": 0.15,
+        "pull_ms": 15,
+        "release_ms": 10
+      },
+      "x": 960,
+      "y": -200,
+      "rot": 270
+    },
+    {
+      "id": "psu1",
+      "type": "psu",
+      "props": {
+        "voltage": 5,
+        "limit": 3,
+        "output": false
+      },
+      "x": 340,
+      "y": 160,
+      "rot": 0
+    }
+  ],
+  "wires": [
+    {
+      "id": "w1",
+      "from": "soilmoisture4:VCC",
+      "to": "xiaoc31:3V3",
+      "color": "#e14b4b",
+      "bends": [
+        {
+          "x": 780,
+          "y": -400
+        },
+        {
+          "x": 780,
+          "y": -300
+        },
+        {
+          "x": 640,
+          "y": -120
+        }
+      ]
+    },
+    {
+      "id": "w2",
+      "from": "soilmoisture3:VCC",
+      "to": "xiaoc31:3V3",
+      "color": "#e14b4b",
+      "bends": [
+        {
+          "x": 940,
+          "y": -400
+        },
+        {
+          "x": 940,
+          "y": -300
+        },
+        {
+          "x": 780,
+          "y": -300
+        },
+        {
+          "x": 640,
+          "y": -120
+        }
+      ]
+    },
+    {
+      "id": "w3",
+      "from": "soilmoisture2:VCC",
+      "to": "xiaoc31:3V3",
+      "color": "#e14b4b",
+      "bends": [
+        {
+          "x": 1100,
+          "y": -400
+        },
+        {
+          "x": 1100,
+          "y": -300
+        },
+        {
+          "x": 780,
+          "y": -300
+        },
+        {
+          "x": 640,
+          "y": -120
+        }
+      ]
+    },
+    {
+      "id": "w4",
+      "from": "soilmoisture1:VCC",
+      "to": "xiaoc31:3V3",
+      "color": "#e14b4b",
+      "bends": [
+        {
+          "x": 1300,
+          "y": -400
+        },
+        {
+          "x": 1240,
+          "y": -300
+        },
+        {
+          "x": 780,
+          "y": -300
+        },
+        {
+          "x": 640,
+          "y": -120
+        }
+      ]
+    },
+    {
+      "id": "w5",
+      "from": "soilmoisture4:GND",
+      "to": "xiaoc31:GND",
+      "color": "#1f9d55",
+      "bends": [
+        {
+          "x": 760,
+          "y": -320
+        },
+        {
+          "x": 620,
+          "y": -140
+        }
+      ]
+    },
+    {
+      "id": "w6",
+      "from": "soilmoisture3:GND",
+      "to": "xiaoc31:GND",
+      "color": "#1f9d55",
+      "bends": [
+        {
+          "x": 980,
+          "y": -380
+        },
+        {
+          "x": 980,
+          "y": -240
+        },
+        {
+          "x": 780,
+          "y": -240
+        },
+        {
+          "x": 620,
+          "y": -140
+        }
+      ]
+    },
+    {
+      "id": "w7",
+      "from": "soilmoisture2:GND",
+      "to": "xiaoc31:GND",
+      "color": "#1f9d55",
+      "bends": [
+        {
+          "x": 1140,
+          "y": -380
+        },
+        {
+          "x": 1140,
+          "y": -240
+        },
+        {
+          "x": 780,
+          "y": -240
+        },
+        {
+          "x": 620,
+          "y": -140
+        }
+      ]
+    },
+    {
+      "id": "w8",
+      "from": "soilmoisture1:GND",
+      "to": "xiaoc31:GND",
+      "color": "#1f9d55",
+      "bends": [
+        {
+          "x": 1340,
+          "y": -380
+        },
+        {
+          "x": 1340,
+          "y": -240
+        },
+        {
+          "x": 780,
+          "y": -240
+        },
+        {
+          "x": 620,
+          "y": -140
+        }
+      ]
+    },
+    {
+      "id": "w9",
+      "from": "soilmoisture4:AOUT",
+      "to": "xiaoc31:D0",
+      "color": "#2f6fed",
+      "bends": [
+        {
+          "x": 820,
+          "y": -420
+        },
+        {
+          "x": 820,
+          "y": -260
+        },
+        {
+          "x": 400,
+          "y": -260
+        }
+      ]
+    },
+    {
+      "id": "w10",
+      "from": "soilmoisture3:AOUT",
+      "to": "xiaoc31:D1",
+      "color": "#2f6fed",
+      "bends": [
+        {
+          "x": 1020,
+          "y": -420
+        },
+        {
+          "x": 1020,
+          "y": -280
+        },
+        {
+          "x": 360,
+          "y": -280
+        },
+        {
+          "x": 360,
+          "y": -140
+        }
+      ]
+    },
+    {
+      "id": "w11",
+      "from": "soilmoisture2:AOUT",
+      "to": "xiaoc31:D2",
+      "color": "#2f6fed",
+      "bends": [
+        {
+          "x": 1120,
+          "y": -420
+        },
+        {
+          "x": 1120,
+          "y": -300
+        },
+        {
+          "x": 320,
+          "y": -300
+        },
+        {
+          "x": 320,
+          "y": -120
+        }
+      ]
+    },
+    {
+      "id": "w12",
+      "from": "soilmoisture1:AOUT",
+      "to": "xiaoc31:D3",
+      "color": "#2f6fed",
+      "bends": [
+        {
+          "x": 1300,
+          "y": -420
+        },
+        {
+          "x": 1300,
+          "y": -660
+        },
+        {
+          "x": 280,
+          "y": -660
+        },
+        {
+          "x": 280,
+          "y": -100
+        }
+      ]
+    },
+    {
+      "id": "w13",
+      "from": "psu1:V+",
+      "to": "relay81:VCC",
+      "color": "#8a5cf5",
+      "bends": [
+        {
+          "x": 520,
+          "y": 360
+        },
+        {
+          "x": 700,
+          "y": 360
+        },
+        {
+          "x": 700,
+          "y": 300
+        }
+      ]
+    },
+    {
+      "id": "w14",
+      "from": "psu1:V-",
+      "to": "xiaoc31:GND",
+      "color": "#20b2c6",
+      "bends": [
+        {
+          "x": 660,
+          "y": 340
+        },
+        {
+          "x": 660,
+          "y": -140
+        }
+      ]
+    },
+    {
+      "id": "w15",
+      "from": "relay81:GND",
+      "to": "psu1:V-",
+      "color": "#2f6fed",
+      "bends": [
+        {
+          "x": 660,
+          "y": 120
+        },
+        {
+          "x": 660,
+          "y": 340
+        }
+      ]
+    },
+    {
+      "id": "w16",
+      "from": "relay81:IN1",
+      "to": "xiaoc31:D6",
+      "color": "#7a8290",
+      "bends": [
+        {
+          "x": 620,
+          "y": 140
+        },
+        {
+          "x": 400,
+          "y": 20
+        }
+      ]
+    },
+    {
+      "id": "w17",
+      "from": "relay81:IN2",
+      "to": "xiaoc31:D5",
+      "color": "#7a8290",
+      "bends": [
+        {
+          "x": 580,
+          "y": 160
+        },
+        {
+          "x": 360,
+          "y": 20
+        },
+        {
+          "x": 360,
+          "y": -60
+        }
+      ]
+    },
+    {
+      "id": "w18",
+      "from": "relay81:IN3",
+      "to": "xiaoc31:D10",
+      "color": "#7a8290",
+      "bends": [
+        {
+          "x": 700,
+          "y": 180
+        },
+        {
+          "x": 700,
+          "y": -100
+        }
+      ]
+    },
+    {
+      "id": "w20",
+      "from": "relay81:IN5",
+      "to": "xiaoc31:D7",
+      "color": "#7a8290",
+      "bends": [
+        {
+          "x": 580,
+          "y": 220
+        },
+        {
+          "x": 580,
+          "y": -40
+        }
+      ]
+    },
+    {
+      "id": "w19",
+      "from": "relay81:IN4",
+      "to": "xiaoc31:D8",
+      "color": "#7a8290",
+      "bends": [
+        {
+          "x": 620,
+          "y": 200
+        },
+        {
+          "x": 620,
+          "y": -60
+        }
+      ]
+    },
+    {
+      "id": "w21",
+      "from": "relay81:NO1",
+      "to": "solenoid3:1",
+      "color": "#8a5cf5",
+      "bends": [
+        {
+          "x": 780,
+          "y": 80
+        },
+        {
+          "x": 880,
+          "y": 80
+        },
+        {
+          "x": 880,
+          "y": -80
+        }
+      ]
+    },
+    {
+      "id": "w22",
+      "from": "relay81:NC1",
+      "to": "solenoid3:2",
+      "color": "#20b2c6",
+      "bends": [
+        {
+          "x": 820,
+          "y": 40
+        },
+        {
+          "x": 920,
+          "y": 40
+        },
+        {
+          "x": 920,
+          "y": -140
+        }
+      ]
+    },
+    {
+      "id": "w23",
+      "from": "relay81:NO2",
+      "to": "solenoid2:1",
+      "color": "#d94f9c",
+      "bends": [
+        {
+          "x": 860,
+          "y": 0
+        },
+        {
+          "x": 1020,
+          "y": 0
+        },
+        {
+          "x": 1020,
+          "y": -80
+        }
+      ]
+    },
+    {
+      "id": "w24",
+      "from": "relay81:NC2",
+      "to": "solenoid2:2",
+      "color": "#7a8290",
+      "bends": [
+        {
+          "x": 900,
+          "y": -40
+        },
+        {
+          "x": 1060,
+          "y": -40
+        },
+        {
+          "x": 1060,
+          "y": -140
+        }
+      ]
+    },
+    {
+      "id": "w25",
+      "from": "relay81:NO3",
+      "to": "solenoid5:1",
+      "color": "#e14b4b",
+      "bends": [
+        {
+          "x": 940,
+          "y": -80
+        }
+      ]
+    },
+    {
+      "id": "w26",
+      "from": "relay81:NC3",
+      "to": "solenoid5:2",
+      "color": "#2f6fed",
+      "bends": [
+        {
+          "x": 980,
+          "y": -120
+        },
+        {
+          "x": 1160,
+          "y": -120
+        },
+        {
+          "x": 1160,
+          "y": -140
+        }
+      ]
+    },
+    {
+      "id": "w27",
+      "from": "relay81:NO4",
+      "to": "solenoid1:1",
+      "color": "#1f9d55",
+      "bends": [
+        {
+          "x": 1020,
+          "y": -160
+        },
+        {
+          "x": 1320,
+          "y": -160
+        },
+        {
+          "x": 1320,
+          "y": -80
+        }
+      ]
+    },
+    {
+      "id": "w28",
+      "from": "relay81:NC4",
+      "to": "solenoid1:2",
+      "color": "#e8a33d",
+      "bends": [
+        {
+          "x": 1060,
+          "y": 80
+        },
+        {
+          "x": 1360,
+          "y": 80
+        },
+        {
+          "x": 1360,
+          "y": -140
+        }
+      ]
+    },
+    {
+      "id": "w29",
+      "from": "relay81:NO5",
+      "to": "solenoid4:1",
+      "color": "#8a5cf5",
+      "bends": [
+        {
+          "x": 1100,
+          "y": 40
+        },
+        {
+          "x": 60,
+          "y": 40
+        }
+      ]
+    },
+    {
+      "id": "w30",
+      "from": "relay81:NC5",
+      "to": "solenoid4:2",
+      "color": "#20b2c6",
+      "bends": [
+        {
+          "x": 1140,
+          "y": 0
+        },
+        {
+          "x": 120,
+          "y": 0
+        }
+      ]
+    }
+  ],
+  "projects": {
+    "*": {
+      "files": {
+        "sketch.ino": "// Mokxi.\n// This circuit has no board, so Run simulates the parts only.\n// Add a board and pick a program in its Firmware panel: the editor then shows\n// that program's source, and Run builds what you type here for that board.\n\nvoid setup() {\n  pinMode(13, OUTPUT);\n  Serial.begin(115200);\n}\n\nvoid loop() {\n  digitalWrite(13, HIGH);\n  delay(500);\n  digitalWrite(13, LOW);\n  delay(500);\n}\n"
+      },
+      "main": "sketch.ino"
+    },
+    "xiaoc31": {
+      "files": {
+        "sketch.ino": "// XIAO ESP32-C3\n// 8-channel relay module\n// 5 solenoid valve outputs\n\n// Relay pin assignments\nconst int MAIN_VALVE = D6;\nconst int FARM1_VALVE = D5;\nconst int FARM2_VALVE = D10;\nconst int FARM3_VALVE = D8;\nconst int FARM4_VALVE = D7;\n\n// Most relay modules are active-LOW.\n// Change to false if your relay module is active-HIGH.\nconst bool RELAY_ACTIVE_LOW = true;\n\nconst int relayPins[] = {\n  MAIN_VALVE,\n  FARM1_VALVE,\n  FARM2_VALVE,\n  FARM3_VALVE,\n  FARM4_VALVE\n};\n\nconst int RELAY_COUNT = 5;\n\nvoid setRelay(int pin, bool on) {\n  if (RELAY_ACTIVE_LOW) {\n    digitalWrite(pin, on ? LOW : HIGH);\n  } else {\n    digitalWrite(pin, on ? HIGH : LOW);\n  }\n}\n\nvoid allRelaysOff() {\n  for (int i = 0; i < RELAY_COUNT; i++) {\n    setRelay(relayPins[i], false);\n  }\n}\n\nvoid setup() {\n  Serial.begin(115200);\n\n  // Set all outputs OFF.\n  for (int i = 0; i < RELAY_COUNT; i++) {\n    digitalWrite(\n      relayPins[i],\n      RELAY_ACTIVE_LOW ? HIGH : LOW\n    );\n    pinMode(relayPins[i], OUTPUT);\n  }\n\n  allRelaysOff();\n\n  Serial.println(\"Solenoid relay test started.\");\n  Serial.println(\"All valves should be OFF initially.\");\n}\n\nvoid loop() {\n  // Test main valve\n  Serial.println(\"Main valve relay ON\");\n  setRelay(MAIN_VALVE, true);\n  delay(2000);\n  setRelay(MAIN_VALVE, false);\n  delay(1000);\n\n  // Test Farm 1\n  Serial.println(\"Farm 1 relay ON\");\n  setRelay(MAIN_VALVE, true);\n  delay(500);\n  setRelay(FARM1_VALVE, true);\n  delay(2000);\n  setRelay(FARM1_VALVE, false);\n  setRelay(MAIN_VALVE, false);\n  delay(1000);\n\n  // Test Farm 2\n  Serial.println(\"Farm 2 relay ON\");\n  setRelay(MAIN_VALVE, true);\n  delay(500);\n  setRelay(FARM2_VALVE, true);\n  delay(2000);\n  setRelay(FARM2_VALVE, false);\n  setRelay(MAIN_VALVE, false);\n  delay(1000);\n\n  // Test Farm 3\n  Serial.println(\"Farm 3 relay ON\");\n  setRelay(MAIN_VALVE, true);\n  delay(500);\n  setRelay(FARM3_VALVE, true);\n  delay(2000);\n  setRelay(FARM3_VALVE, false);\n  setRelay(MAIN_VALVE, false);\n  delay(1000);\n\n  // Test Farm 4\n  Serial.println(\"Farm 4 relay ON\");\n  setRelay(MAIN_VALVE, true);\n  delay(500);\n  setRelay(FARM4_VALVE, true);\n  delay(2000);\n  setRelay(FARM4_VALVE, false);\n  setRelay(MAIN_VALVE, false);\n  delay(2000);\n}"
+      },
+      "main": "sketch.ino"
+    }
+  }
+}
